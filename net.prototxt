@@ -1,0 +1,56 @@
+layer{
+	name:z
+	type:data
+	top:z
+}
+
+layer{
+	name:x
+	type:data
+	top:x
+}
+
+layer{
+	name:convG1
+	type:convolution
+	bottom:z
+	top:convG1
+}
+
+
+layer{
+	name:convG2
+	type:convolution
+	bottom:convG1
+	top:convG2
+}
+
+layer{
+	name:convG3
+	type:convolution
+	bottom:convG2
+	top:convG3
+}
+
+layer{
+	name:convD1
+	type:convolution
+	bottom:convG3
+	bottom:x
+	top:convD1
+}
+
+layer{
+	name:convD2
+	type:convolution
+	botoom:convD1
+	top:convD2
+}
+
+layer{
+	name:convD3
+	type:convolution
+	botoom:convD2
+	top:convD3
+}
+
