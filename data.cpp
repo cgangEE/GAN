@@ -29,7 +29,7 @@ void strToDouble(char *buf, double *x){
 			x[idx++] = num;
 			num = 0;
 		}
-		else
+		else if (isdigit(buf[i]))
 			num = num * 10 + buf[i] - '0';
 }
 
@@ -55,7 +55,9 @@ bool readTrain(double ** &X){
 
 void release(double **X){
 	for (int i=0; i<M; ++i)
-		free(X[i]);
-	free(X);
+		if (X[i] != NULL)
+			free(X[i]);
+	if (X!=NULL) 
+		free(X);
 }
 

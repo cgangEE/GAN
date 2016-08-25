@@ -9,6 +9,7 @@ int main(){
 	double **X;
 	vector<Layer> layers;
 
+
 	if (!readTrain(X)) return 1;
 	if (!readNet(layers)) return 1;
 	buildNet(layers);
@@ -16,5 +17,6 @@ int main(){
 	train();
 
 	release(X);
+	release(layers);
 	return 0;
 }
