@@ -3,6 +3,11 @@
 #include "net.h"
 
 void train(){
+
+	for (int iter = 0; iter <= MAX_ITER; ++iter){
+		
+
+	}
 }
 
 int main(){

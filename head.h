@@ -28,5 +28,6 @@ template <class T> void checkmin(T &a, T b){ if (b<a) a=b; }
 #define N 28
 #define M 42001
 #define BUF_SIZE 1000000
+#define MAX_ITER 1000
 
 #endif

@@ -1,5 +1,9 @@
 #include "data.h"
 
+void loadZ(double *z){
+
+}
+
 double *loadZ(){
 	double *ret = (double *)malloc(sizeof(double)*N*N);
 	for (int i=0; i<N*N; ++i)
